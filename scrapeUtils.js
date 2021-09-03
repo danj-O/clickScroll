@@ -4,7 +4,7 @@ const clickFarm = async (data) => {
   const formattedUrlsArr = await formatData(data)
   console.log(formattedUrlsArr)
   let scrapedData = []
-  await puppeteer.launch({ headless: false, args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1920,1080','--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3312.0 Safari/537.36"'] })
+  await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1920,1080','--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3312.0 Safari/537.36"'] })
   .then(async browser => {
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0);
